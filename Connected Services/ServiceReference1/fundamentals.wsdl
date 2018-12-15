@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="fundamentals" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Ifundamentals_Ajouter_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ajouter" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_Ajouter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjouterResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStores" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStaffs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffs" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStaffs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddresses" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStores_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStores" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaff" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStaff2_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaff2" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddStaff2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStaff2Response" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddress" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Ifundamentals">
+    <wsdl:operation name="Ajouter">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/Ajouter" message="tns:Ifundamentals_Ajouter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AjouterResponse" message="tns:Ifundamentals_Ajouter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStores">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStores" message="tns:Ifundamentals_GetStores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStoresResponse" message="tns:Ifundamentals_GetStores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetCountries" message="tns:Ifundamentals_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetCountriesResponse" message="tns:Ifundamentals_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffs" message="tns:Ifundamentals_GetStaffs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffsResponse" message="tns:Ifundamentals_GetStaffs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetCities" message="tns:Ifundamentals_GetCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetCitiesResponse" message="tns:Ifundamentals_GetCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetAddresses" message="tns:Ifundamentals_GetAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetAddressesResponse" message="tns:Ifundamentals_GetAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStores">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStores" message="tns:Ifundamentals_AddStores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStoresResponse" message="tns:Ifundamentals_AddStores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff" message="tns:Ifundamentals_AddStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStaffResponse" message="tns:Ifundamentals_AddStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStaff2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff2" message="tns:Ifundamentals_AddStaff2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff2Response" message="tns:Ifundamentals_AddStaff2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddAddress" message="tns:Ifundamentals_AddAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddAddressResponse" message="tns:Ifundamentals_AddAddress_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Ifundamentals" type="tns:Ifundamentals">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ajouter">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/Ajouter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStores">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStaffs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddresses">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStores">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStaff">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStaff2">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddStaff2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="fundamentals">
+    <wsdl:port name="BasicHttpBinding_Ifundamentals" binding="tns:BasicHttpBinding_Ifundamentals">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

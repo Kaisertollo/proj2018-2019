@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="proj2018_2019.AddAddress"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:proj2018_2019"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="400">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="390" Margin="10,0,0,0">
+
+
+            <TextBlock HorizontalAlignment="Left" Margin="71,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" RenderTransformOrigin="0.292,0.298" Height="40"><Run Text="&#x9;ADD  A"/><Run Text="DDRESS"/></TextBlock>
+            <Grid HorizontalAlignment="Left" Height="391" Margin="24,79,0,0" VerticalAlignment="Top" Width="336">
+                <materialDesign:PackIcon Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,20,0,339" />
+                <TextBox x:Name="AddressTextBox" 
+            materialDesign:HintAssist.Hint= "Address1" Margin="71,20,59,336" />
+                <materialDesign:PackIcon Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,83,0,276" />
+                <TextBox x:Name="Address2TextBox" 
+            materialDesign:HintAssist.Hint= "Address2" Margin="65,83,71,276" RenderTransformOrigin="0.496,-0.192"/>
+                <materialDesign:PackIcon Kind="LocationCity" Width="40" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,140,0,219" />
+                <TextBox x:Name="DistrictTextBox" 
+            materialDesign:HintAssist.Hint= "District" Margin="71,143,65,219" RenderTransformOrigin="0.617,-0.184"/>
+                <materialDesign:PackIcon Kind="CityVariantOutline" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,196,0,163" />
+                <ComboBox x:Name="CityComboBox" materialDesign:HintAssist.Hint="City" Margin="77,199,59,163"></ComboBox>
+                <materialDesign:PackIcon Kind="Phone" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,257,0,102" />
+                <TextBox x:Name="phoneTextBox" 
+                    materialDesign:HintAssist.Hint= "Phone" Margin="77,266,53,102" />
+                <materialDesign:PackIcon Kind="LocalPostOffice" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,312,0,47" />
+                <TextBox x:Name="PostalTextBox" 
+                    materialDesign:HintAssist.Hint= "PostalCode" Margin="71,312,59,47" />
+            </Grid>
+
+        </Grid>
+        <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="48,525,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" Click="Valider_Click"/>
+        <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="237,525,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
+
+    </Grid>
+</UserControl>
