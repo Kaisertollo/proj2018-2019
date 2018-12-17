@@ -11,19 +11,19 @@
         xmlns:local="clr-namespace:proj2018_2019"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1500">
+        Title="MainWindow" Height="710" Width="1500" ResizeMode="CanMinimize">
     <Grid x:Name="mainGrid" Background="#FFEEEEEE" Margin="0,0,2,0">
-        <Grid x:Name="sideGrid" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="328"  Background="#FF222222" Margin="0,0,0,-1">
+        <Grid x:Name="sideGrid" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="328"  Background="#FF222222" Margin="0,0,0,0">
 
-            <ListView  x:Name="ListViewMenu" Margin="0,0,122,291"  Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="20" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="-1">
+            <ListView  x:Name="ListViewMenu" Margin="0,0,154,358"  Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="20" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="-1">
 
-                <ListViewItem Height="70" Width="192">
+                <ListViewItem Height="70" Width="158">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Home" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Acceuil" FontSize="20" VerticalAlignment="Center" Margin="20  0"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="70">
+                <ListViewItem Height="70" Width="174">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Store" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Boutique" FontSize="20" VerticalAlignment="Center" Margin="20 0" Width="95" Height="30"/>
@@ -33,19 +33,19 @@
 
 
                 </ListViewItem>
-                <ListViewItem Height="70">
+                <ListViewItem Height="70" Width="169">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Worker" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Staffs" FontSize="20" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="70">
-                    <StackPanel Orientation="Horizontal">
+                <ListViewItem Height="70" Width="169">
+                    <StackPanel Orientation="Horizontal" Width="147">
                         <materialDesign:PackIcon Kind="Movie" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Films" FontSize="20" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="70">
+                <ListViewItem Height="70" Width="174">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="AddLocation" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Address" FontSize="20" VerticalAlignment="Center" Margin="20 0"/>
@@ -54,7 +54,7 @@
 
 
             </ListView>
-            <ListView Visibility="Hidden" x:Name="StaffMenu" Margin="205,142,-32,494" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines"  SelectionChanged="StaffMenu_SelectionChanged" SelectedIndex="-1">
+            <ListView  Visibility="Collapsed"  x:Name="StaffMenu" Margin="205,142,-32,452" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines"  SelectionChanged="StaffMenu_SelectionChanged" SelectedIndex="-1">
 
                 <ListViewItem Width="138">
                     <StackPanel Orientation="Horizontal">
@@ -69,7 +69,8 @@
                     </StackPanel>
                 </ListViewItem>
             </ListView>
-            <ListView Visibility="Hidden" x:Name="AddressMenu" Margin="206,268,-33,368" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines"  SelectionChanged="AddressMenu_SelectionChanged" SelectedIndex="-1">
+
+            <ListView  Visibility="Collapsed"  x:Name="StoreMenu" Margin="205,58,-32,534" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines"  SelectionChanged="StoreMenu_SelectionChanged" SelectedIndex="-1">
 
                 <ListViewItem Width="138">
                     <StackPanel Orientation="Horizontal">
@@ -84,19 +85,30 @@
                     </StackPanel>
                 </ListViewItem>
             </ListView>
-            <Image HorizontalAlignment="Left" Height="383" Margin="0,337,0,0" VerticalAlignment="Top" Width="328" Source="Movie Night (1).png" RenderTransformOrigin="0.623,0.51"/>
-            <!--<Menu Visibility="Hidden" x:Name="StaffMenu"  Margin="177,136,0,506" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines" FontSize="15" Background="#FF222222" >
-                
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel/>
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Header="Add" Height="38"></MenuItem>
-                <MenuItem Header="Search" Height="40" Margin="0,0,-10,0"></MenuItem>
-            </Menu>-->
+            <ListView Visibility="Collapsed"  x:Name="MovieMenu" Margin="179,202,0,377" RenderTransformOrigin="0.5,0.5" Foreground="LightGray" FontFamily="Champagne &amp; Limousines"  SelectionChanged="MovieMenu_SelectionChanged" SelectedIndex="-1">
+                <ListViewItem Width="138">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AddCircle" Width="30" Height="22" VerticalAlignment="Center"/>
+                        <TextBlock Text="Ajouter film film" FontSize="17" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Width="138">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="AddCircle" Width="30" Height="22" VerticalAlignment="Center"/>
+                        <TextBlock Text="Acteur " FontSize="17" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem  Width="138">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Search" Width="30" Height="22" VerticalAlignment="Center"/>
+                        <TextBlock Text="Search" FontSize="17" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+            <Image HorizontalAlignment="Left" Height="316" Margin="62,366,0,0" VerticalAlignment="Top" Width="266" Source="Movie Night (1).png" RenderTransformOrigin="0.623,0.51"/>
+
         </Grid>
-        <Grid x:Name="main2Grid" HorizontalAlignment="Left" Height="710" Margin="333,10,0,-1" VerticalAlignment="Top" Width="1157">
+        <Grid x:Name="main2Grid" HorizontalAlignment="Left" Height="710" Margin="333,0,0,0" VerticalAlignment="Top" Width="1157">
             <!--<Grid.ColumnDefinitions>
                 <ColumnDefinition Width="441*"/>
                 <ColumnDefinition Width="443*"/>
@@ -105,7 +117,7 @@
                 <Label Visibility="Collapsed" Content="Label" HorizontalAlignment="Left" Margin="99,68,0,0" VerticalAlignment="Top"/>
             </Grid>
             <Grid x:Name="Mygrid2" HorizontalAlignment="Left" Height="710" Margin="400,0,0,0" VerticalAlignment="Top" Width="757">
-                <Grid  HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="400"/>
+                <Grid  HorizontalAlignment="Left" Width="400"/>
                 <Grid HorizontalAlignment="Left" Height="710" Margin="400,0,0,0" VerticalAlignment="Top" Width="357"/>
 
             </Grid>

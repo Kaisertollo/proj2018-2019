@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/ThiouneService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" />
+  <xs:element name="Ajouterfilm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="F" nillable="true" type="q1:Film" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AjouterfilmResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterfilm_actor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="fa" nillable="true" type="q2:Film_Actor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterfilm_actorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterfilm_categories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="fc" nillable="true" type="q3:Film_Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterfilm_categoriesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Categorie1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categori" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Categorie1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Film_Par_Categorie1Result" nillable="true" type="q4:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Categorie2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categori1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categori2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Categorie2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Film_Par_Categorie2Result" nillable="true" type="q5:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Acteur">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="act" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_ActeurResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Film_Par_ActeurResult" nillable="true" type="q6:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_Langue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="langue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Film_Par_LangueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Film_Par_LangueResult" nillable="true" type="q7:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

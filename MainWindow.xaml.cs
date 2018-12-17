@@ -23,63 +23,86 @@ namespace proj2018_2019
         public MainWindow()
         {
             InitializeComponent();
-            
-          
-
         }
+
+        /*la circulationn au niveau du menu la visibilite des sous menus
+        * UseCase Si je Selectionne le champs Staff je dois voir le sous Menu Staff only les autre doivent disparaitre   
+        */
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            // index indique l'option selectionne
             int index = ListViewMenu.SelectedIndex;
-            AddressMenu.Visibility = System.Windows.Visibility.Hidden;
-            StaffMenu.Visibility = System.Windows.Visibility.Hidden;
-            Mygrid1.Visibility = System.Windows.Visibility.Visible;
-            Mygrid2.Visibility = System.Windows.Visibility.Visible;
-            if (index==2)
-            {
-                StaffMenu.Visibility = System.Windows.Visibility.Visible;
-               
-                AddressMenu.SelectedIndex = -1;
-            }
-                
-           if (index == 4)
-            {
-              
-                StaffMenu.SelectedIndex = -1;
-                AddressMenu.Visibility = System.Windows.Visibility.Visible;
-            }
 
-            if (index == 1)
+            //Tous les sous-menus doivent etre invisble
+            StoreMenu.Visibility = Visibility.Collapsed;
+            StaffMenu.Visibility = Visibility.Collapsed;
+            MovieMenu.Visibility = Visibility.Collapsed;
+            // now selon l'option selectionne dans le MainMenu un sous-menu va apparaitre or stay collapsed
+            // Mygrid1.Visibility = System.Windows.Visibility.Visible;
+            //Mygrid2.Visibility = System.Windows.Visibility.Visible;
+            switch(index)
             {
-                Mygrid2.Visibility = System.Windows.Visibility.Collapsed;
-                Mygrid1.Visibility = System.Windows.Visibility.Collapsed;
-                main2Grid.Children.Add(new AjouterStore());
-            }
+                case 1:
+                    StoreMenu.Visibility = Visibility.Visible;
+                    StoreMenu.SelectedIndex = -1;
+                    break;
+                case 2:
+                    StaffMenu.Visibility = System.Windows.Visibility.Visible;
+                    StaffMenu.SelectedIndex = -1;
+                    break;
+                case 3:
+                    MovieMenu.Visibility = System.Windows.Visibility.Visible;
+                    MovieMenu.SelectedIndex = -1;
+                    break;
+                case 4:
+                    main2Grid.Children.Clear();
+                    main2Grid.Children.Add(new AddAddress());
+                    break;
 
+            }
         }
-       private void StaffMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        /// <summary>
+        /// //Staff,Store,Movuie subMenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void StaffMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
        {
             int index = StaffMenu.SelectedIndex;
             switch(index)
             {
                 case 0:
-                    Mygrid1.Children.Clear();
-                    Mygrid1.Children.Add(new AddStaff());
+                    main2Grid.Children.Clear();
+                    main2Grid.Children.Add(new AddStaff());
                     break;
-
             }
-        }
+       }
 
-        private void AddressMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+      
+
+        private void MovieMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = AddressMenu.SelectedIndex;
+            int index = MovieMenu.SelectedIndex;
             switch (index)
             {
                 case 0:
-                    Mygrid1.Children.Clear();
-                    Mygrid1.Children.Add(new AddAddress());
+                    main2Grid.Children.Clear();
+                    main2Grid.Children.Add(new AddMovies());
                     break;
+            }
 
+        }
+
+        private void StoreMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = StoreMenu.SelectedIndex;
+            switch (index)
+            {
+                case 0:
+                    main2Grid.Children.Clear();
+                    main2Grid.Children.Add(new AjouterStore());
+                    break;
             }
         }
     }

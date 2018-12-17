@@ -11,11 +11,11 @@
              xmlns:local="clr-namespace:proj2018_2019"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="690" d:DesignWidth="400">
+             d:DesignHeight="700" d:DesignWidth="1157">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="690" VerticalAlignment="Top" Width="400">
+        <Grid HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="400">
             <Grid HorizontalAlignment="Left" Height="105" Margin="94,21,0,0" VerticalAlignment="Top" Width="170" >
-                <Ellipse x:Name="elipse" Margin="10,-12,0,-39" MouseDown="Image_Click" MouseEnter="image_Hover" MouseLeave="Image_Leave"> 
+                <Ellipse x:Name="elipse" Margin="10,-12,0,-39" MouseDown="Image_Click" MouseEnter="image_Hover" MouseLeave="Image_Leave">
                     <Ellipse.Fill>
                         <ImageBrush x:Name="image_profile" ImageSource="man (2).png"    />
                     </Ellipse.Fill>
@@ -26,7 +26,7 @@
             <Grid x:Name="GridIF" HorizontalAlignment="Left" Height="235" Margin="28,200,0,0" VerticalAlignment="Top" Width="336">
                 <materialDesign:PackIcon x:Name="iconFirstName" Kind="Person" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,9,0,194" />
                 <TextBox x:Name="FirstNameTextBox" 
-            materialDesign:HintAssist.Hint= "Prenom"  Margin="65,13,37,194" TextChanged="FirstNameTextBox_TextChanged"/>
+            materialDesign:HintAssist.Hint= "Prenom"  Margin="65,13,37,194" />
                 <materialDesign:PackIcon x:Name="iconLastName" Kind="Person" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,59,0,144" />
                 <TextBox x:Name="LastNameTextBox" 
             materialDesign:HintAssist.Hint= "Nom" Margin="65,59,37,146" RenderTransformOrigin="0.496,-0.192"/>
@@ -36,7 +36,7 @@
                 <materialDesign:PackIcon x:Name="iconAd" Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,157,0,46" />
                 <ComboBox x:Name="AdresseComboBox" materialDesign:HintAssist.Hint="Addresse" Margin="65,160,76,46" ></ComboBox>
 
-                <materialDesign:PackIcon x:Name="addAddresse" Kind="AddCircle" Width="40" Height="40" VerticalAlignment="Center"  MouseDown="AddAddress" RenderTransformOrigin="3.407,1.249" Margin="279,160,0,34" Foreground="#DD16CF04" />
+                <materialDesign:PackIcon Visibility="Collapsed" x:Name="addAddresse" Kind="AddCircle" Width="40" Height="40" VerticalAlignment="Center"  MouseDown="AddAddress" RenderTransformOrigin="3.407,1.249" Margin="279,160,0,34" Foreground="#DD16CF04" />
             </Grid>
 
             <TextBlock HorizontalAlignment="Left" Margin="83,435,0,0" TextWrapping="Wrap" Text="INFORMATION DE CONNEXION" VerticalAlignment="Top" Width="236"/>
@@ -49,9 +49,12 @@
             materialDesign:HintAssist.Hint= "Password" 
              Width="202" Margin="65,54,37,21"/>
             </Grid>
-            <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="39,641,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" Click="Valider_Click"/>
-            <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="261,641,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
+            <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="39,606,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" Click="Valider_Click"/>
+            <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="261,606,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
 
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="700" Margin="400,0,0,0" VerticalAlignment="Top" Width="757">
+            <Image Margin="-9,0,0,0" Source="pexels-photo-66134.jpeg" Stretch="Fill"/>
         </Grid>
 
     </Grid>

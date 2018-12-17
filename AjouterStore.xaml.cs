@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -20,36 +21,51 @@ namespace proj2018_2019
     /// <summary>
     /// Logique d'interaction pour AjouterStore.xaml
     /// </summary>
+    
+    /// Class StaffL Allow to add a binding proprety(StaffL.boole) to my Checkbox'isChecked Method
     public class StaffL
     {
         public Staff Staff { get; set; }
-        public CheckBox boole { get; set; }
+        public Boolean boole { get; set; }
     }
-    public partial class AjouterStore : UserControl
+
+  
+    public partial class AjouterStore : System.Windows.Controls.UserControl
     {
-        private string Manager_Id { get; set; }
-        public int compteur { get; set; }
+        private int Manager_Id { get; set; }
         public IfundamentalsClient Client { get; set; }
+        private List<StaffL> listL { get; set; }
         public AjouterStore()
         {
+
+           /// List<int> cc = new List<int>();
+           /// cc.int
+            /// IfundamentalClient Still the Same Use allow me to interact with my services
             Client = new IfundamentalsClient();
             InitializeComponent();
-            List<StaffL> listL = new List<StaffL>();
 
+            //2 List ListL is use to fill my table and ListS is use to fill List[i].Staff that's what i'm doing inside the foreach
+             listL = new List<StaffL>();
             List<Staff> listS = Client.GetStaffs().ToList<Staff>();
-
             foreach(Staff k in listS)
             {
                 StaffL v32 = new StaffL();
                 v32.Staff = k;
-                v32.boole = new CheckBox();
-                v32.boole.IsChecked=true;
+              
+                v32.boole=false;
                 listL.Add(v32);
             }
-
-            DeleteManager.Visibility = Visibility.Collapsed;
             List1.ItemsSource = listL;
-           foreach(Staff s in listS)
+
+            //voir serveur pour definition des services
+            //AllAddress me permet de remplir mon Combobox d'addresse 
+            ICollection<Address> AllAddress = Client.GetAddresses();
+            AdresseComboBox.ItemsSource = AllAddress;
+            AdresseComboBox.DisplayMemberPath = "Address_Lib";
+
+
+            //Create the Staff Profile Photo Inside A folder
+            foreach (Staff s in listS)
             {
                 if (s.Picture != null)
                 {
@@ -62,7 +78,8 @@ namespace proj2018_2019
         }
 
       
-
+        //Event:the List Selection Changed
+        //outcome:Dispay the about the Selectionned Row for a better looking
         private void list1Changed(object sender, SelectionChangedEventArgs e)
         {
             if (List1.SelectedIndex != -1)
@@ -70,30 +87,52 @@ namespace proj2018_2019
                 StaffL s = (StaffL)List1.SelectedItem;
                 
                 image_List1.ImageSource = new BitmapImage(new Uri(@"C:\Users\USER\Pictures\W3.CSS_files\"+s.Staff.Staff_ID +".jpg", UriKind.Relative));
+                IdINfo.Text = ""+s.Staff.Staff_ID;
+                Prenom.Text = s.Staff.FirstName;
+                Nom.Text = s.Staff.LastName;
                 List1.SelectedIndex = -1;
             }
         }
 
+        //Choosing a Store's Manager
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Manager_Id = IdINfo.Text;
-            ManagerButton.Visibility = Visibility.Collapsed;
-            DeleteManager.Visibility = Visibility.Visible;
+          
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Choisir Comme Manager Boutique", "Changer Managger", buttons);
+            if (result == DialogResult.Yes)
+            {
+                Manager_Id = Int32.Parse(IdINfo.Text);
+                ManagerButton.Visibility = Visibility.Collapsed;
+                DeleteManager.Visibility = Visibility.Visible;
+            }
         }
-
+        //Delete the Choosen  Store's Manager
         private void DeleteManager_Click(object sender, RoutedEventArgs e)
         {
-            ManagerButton.Visibility = Visibility.Visible;
-            DeleteManager.Visibility = Visibility.Collapsed;
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Attention vous allez changer le manager deja choisi","Changer Manager",buttons);
+            if (result == DialogResult.Yes)
+            {
+                Manager_Id = 0;
+                ManagerButton.Visibility = Visibility.Visible;
+                DeleteManager.Visibility = Visibility.Collapsed;
+            }
+
+             ;
         }
 
+        //Add the Store And Update Staffs
         private void Valider_Click(object sender, RoutedEventArgs e)
         {
-            for(int i=0; i< Client.GetStaffs().ToList<Staff>().Count;i++)
+            Store st = new Store();
+            st.Address_ID = ((Address)AdresseComboBox.SelectedItem).Address_ID;
+            st.Manager_Staff_ID = Manager_Id;
+            Client.AddStores(st);
+            foreach (StaffL s in listL)
             {
-                ItemCollection vv=List1.Items;
-                vv.GetItemAt(i);
-                   
+                if (s.boole)
+                    Client.UpdateStaff(s.Staff.Staff_ID, Client.LastId());
             }
         }
     }

@@ -20,19 +20,22 @@ namespace proj2018_2019
     /// </summary>
     public partial class AddAddress : UserControl
     {
+         //* IFundamentalClient Client a travers laquelle je fait appel au service de IFundamentals
         IfundamentalsClient client = new IfundamentalsClient();
         public AddAddress()
         {
             InitializeComponent();
            
-            
-            ICollection<City> fff = client.GetCities();
-            CityComboBox.ItemsSource = fff;
+            //Remplir Ma comboBox
+            //Maybe Create a Custom Class in Order to Have a better Style of view avec Country et tout Pas Urgent
+            ICollection<City> Cities = client.GetCities();
+            CityComboBox.ItemsSource = Cities;
             CityComboBox.DisplayMemberPath = "City_Lib";
 
         }
-      
 
+        //Event:valider Form
+        //Outcome:enregistrement info si reussi reInit formulaire si rater show Message box
         private void Valider_Click(object sender, RoutedEventArgs e)
         {
 
@@ -45,6 +48,8 @@ namespace proj2018_2019
                 a.Phone = phoneTextBox.Text;
                 a.Postal_Code = PostalTextBox.Text;
                 a.City_ID = ((City)CityComboBox.SelectedItem).City_ID;
+                
+                //Return or throw something
                 client.AddAddress(a);
                 AddressTextBox.Text = "";
                 Address2TextBox.Text = "";

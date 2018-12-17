@@ -64,10 +64,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddMovies.xaml.cs">
+      <DependentUpon>AddMovies.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Page Include="AddAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMovies.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="add-user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pexels-photo-66134.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pexels-photo-269850.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

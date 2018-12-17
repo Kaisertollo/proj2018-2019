@@ -67,6 +67,18 @@
   <wsdl:message name="Ifundamentals_AddAddress_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddAddressResponse" />
   </wsdl:message>
+  <wsdl:message name="Ifundamentals_UpdateStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaff" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_UpdateStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_LastId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastId" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_LastId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="Ifundamentals">
     <wsdl:operation name="Ajouter">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/Ajouter" message="tns:Ifundamentals_Ajouter_InputMessage" />
@@ -107,6 +119,14 @@
     <wsdl:operation name="AddAddress">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddAddress" message="tns:Ifundamentals_AddAddress_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddAddressResponse" message="tns:Ifundamentals_AddAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaff" message="tns:Ifundamentals_UpdateStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaffResponse" message="tns:Ifundamentals_UpdateStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LastId">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/LastId" message="tns:Ifundamentals_LastId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/LastIdResponse" message="tns:Ifundamentals_LastId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_Ifundamentals" type="tns:Ifundamentals">
@@ -194,6 +214,24 @@
     </wsdl:operation>
     <wsdl:operation name="AddAddress">
       <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/UpdateStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastId">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/LastId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -669,6 +669,18 @@ namespace proj2018_2019.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddAddress", ReplyAction="http://tempuri.org/Ifundamentals/AddAddressResponse")]
         System.Threading.Tasks.Task AddAddressAsync(proj2018_2019.ServiceReference1.Address address);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
+        void UpdateStaff(int idStaff, int IdStore);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
+        System.Threading.Tasks.Task UpdateStaffAsync(int idStaff, int IdStore);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastId", ReplyAction="http://tempuri.org/Ifundamentals/LastIdResponse")]
+        int LastId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastId", ReplyAction="http://tempuri.org/Ifundamentals/LastIdResponse")]
+        System.Threading.Tasks.Task<int> LastIdAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -776,6 +788,22 @@ namespace proj2018_2019.ServiceReference1 {
         
         public System.Threading.Tasks.Task AddAddressAsync(proj2018_2019.ServiceReference1.Address address) {
             return base.Channel.AddAddressAsync(address);
+        }
+        
+        public void UpdateStaff(int idStaff, int IdStore) {
+            base.Channel.UpdateStaff(idStaff, IdStore);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStaffAsync(int idStaff, int IdStore) {
+            return base.Channel.UpdateStaffAsync(idStaff, IdStore);
+        }
+        
+        public int LastId() {
+            return base.Channel.LastId();
+        }
+        
+        public System.Threading.Tasks.Task<int> LastIdAsync() {
+            return base.Channel.LastIdAsync();
         }
     }
 }

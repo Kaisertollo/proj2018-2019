@@ -13,14 +13,18 @@
              mc:Ignorable="d" 
             d:DesignHeight="700" d:DesignWidth="1157">
     <Grid HorizontalAlignment="Left" Width="1157" Margin="0,0,-311,0">
-        <Grid HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1157" Margin="10,0,-10,0">
-            <Grid HorizontalAlignment="Left" Height="49" Margin="0,22,0,0" VerticalAlignment="Top" Width="335">
-                <materialDesign:PackIcon x:Name="iconAd" Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="40,7,0,10" />
-                <ComboBox x:Name="AdresseComboBox" materialDesign:HintAssist.Hint="Addresse" Margin="74,10,75,7" Height="32" ></ComboBox>
+        <Grid HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1157">
+            <Grid HorizontalAlignment="Left" Height="49" Margin="45,22,0,0" VerticalAlignment="Top" Width="311">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <materialDesign:PackIcon x:Name="iconAd" Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="40,7,0,10" Grid.RowSpan="2" />
+                <ComboBox x:Name="AdresseComboBox" materialDesign:HintAssist.Hint="Addresse" Margin="74,10,75,7" Height="32" Grid.RowSpan="2" ></ComboBox>
 
-                <materialDesign:PackIcon x:Name="addAddresse" Kind="AddCircle" Width="40" Height="40" VerticalAlignment="Center" RenderTransformOrigin="3.407,1.249" Margin="285,9,0,0" Foreground="#DD16CF04" />
+                <materialDesign:PackIcon Visibility="Collapsed" x:Name="addAddresse" Kind="AddCircle" Width="40" Height="40" VerticalAlignment="Center" RenderTransformOrigin="3.407,1.249" Margin="285,9,0,0" Foreground="#DD16CF04" Grid.RowSpan="2" />
             </Grid>
-            <ListView x:Name="List1" Margin="0,104,0,33" HorizontalAlignment="Left" Width="513" SelectedIndex="-1" SelectionChanged="list1Changed">
+            <ListView x:Name="List1" Margin="0,93,0,33" HorizontalAlignment="Left" Width="537" SelectedIndex="-1" SelectionChanged="list1Changed">
                 <ListView.View>
                     <GridView x:Name="View1">
                         <GridViewColumn Header="YES/NO"  Width="100" >
@@ -37,18 +41,18 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <TextBlock HorizontalAlignment="Left" Margin="666,376,0,0" TextWrapping="Wrap" Text="Prenom" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.714"/>
+            <TextBlock HorizontalAlignment="Left" Margin="666,376,0,0" TextWrapping="Wrap" Text="Prenom" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.714" Width="72"/>
             <TextBlock HorizontalAlignment="Left" Margin="666,410,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Height="22"/>
-            <TextBlock HorizontalAlignment="Left" x:Name="Prenom" Margin="812,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBlock HorizontalAlignment="Left"  x:Name="Nom" Margin="812,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Height="22"/>
+            <TextBlock HorizontalAlignment="Left" x:Name="Prenom" Margin="727,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left"  x:Name="Nom" Margin="727,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Height="22"/>
             <Button x:Name="ManagerButton" Content="Faire Manager&#xD;&#xA;" HorizontalAlignment="Left" Margin="666,491,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click"/>
             <TextBlock HorizontalAlignment="Left" Margin="666,446,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" x:Name="IdINfo" Margin="744,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"/>
-            <Button x:Name="DeleteManager" Content="Delete Manager" HorizontalAlignment="Left" Margin="843,39,0,0" VerticalAlignment="Top" Width="162" Background="#FFEE2222" Click="DeleteManager_Click"/>
+            <TextBlock HorizontalAlignment="Left" x:Name="IdINfo" Margin="727,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84"/>
+            <Button Visibility="Collapsed" x:Name="DeleteManager" Content="Delete Manager" HorizontalAlignment="Left" Margin="843,39,0,0" VerticalAlignment="Top" Width="162" Background="#FFEE2222" Click="DeleteManager_Click"/>
 
         </Grid>
-        <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="527,658,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" RenderTransformOrigin="1.422,1.589" Click="Valider_Click" />
-        <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="796,658,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
+        <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="621,627,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" RenderTransformOrigin="1.422,1.589" Click="Valider_Click" />
+        <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="922,627,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
         <Ellipse x:Name="elipse2" Margin="656,103,270,351" >
             <Ellipse.Fill>
                 <ImageBrush x:Name="image_List1" ImageSource="man (2).png"    />
