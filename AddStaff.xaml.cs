@@ -31,6 +31,7 @@ namespace proj2018_2019
          */ 
         IfundamentalsClient client = new IfundamentalsClient();
         OpenFileDialog dlg = new OpenFileDialog();
+        bool img = false;
         public AddStaff()
         {
             InitializeComponent();
@@ -48,10 +49,7 @@ namespace proj2018_2019
         private void Valider_Click(object sender, RoutedEventArgs e)
         {
             //je recupere la photo de profil et je convert en tableau de byte afin de stocker sur la base
-            FileStream fileStream = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
-            byte[] bytes = new byte[fileStream.Length];
-            fileStream.Read(bytes, 0, (int)fileStream.Length);
-            fileStream.Close();
+            
 
             //je recuperer les donnees du Formulaire
             Staff s = new Staff();
@@ -61,11 +59,18 @@ namespace proj2018_2019
             s.Address_ID = ((Address)AdresseComboBox.SelectedItem).Address_ID;
             s.UserName = UseNameTextBox.Text;
             s.Password = PasswordTextBox.Password.ToString();
-            s.Picture = bytes;
+            if (img)
+            {
+                FileStream fileStream = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
+                byte[] bytes = new byte[fileStream.Length];
+                fileStream.Read(bytes, 0, (int)fileStream.Length);
+                fileStream.Close();
+                s.Picture = bytes;
+            }
 
             //Appel du service Client
             string v= client.AddStaff2(s);
-           MessageBox.Show(v);
+            MessageBox.Show(v);
         }
 
         //Evenemet click sur la photo de profil
@@ -82,7 +87,7 @@ namespace proj2018_2019
             {
                 image_profile.ImageSource = new BitmapImage(new Uri(dlg.FileName, UriKind.Relative));
                 elipse.RenderTransform = new ScaleTransform(1.1, 1.1);
-                elipse.Name = "Image-Choisi";//le user a choisi
+                img = true; ;//le user a choisi
             }    
 
         }
@@ -92,9 +97,9 @@ namespace proj2018_2019
         private void image_Hover(object sender, MouseEventArgs e)
         {
 
-            if (elipse.Name.Equals("image_profile"))
+            if (!img)
             {
-                image_profile.ImageSource = new BitmapImage(new Uri(@"C:\Users\USER\source\repos\proj2018-2019\proj2018-2019\add-user (2).png", UriKind.Relative));
+                image_profile.ImageSource = new BitmapImage(new Uri(@"C:\Users\USER\source\repos\proj2018-2019\proj2018-2019\Images\add-user (2).png", UriKind.Relative));
                 elipse.RenderTransform = new ScaleTransform(1.1, 1.1);
             }
         }
@@ -103,9 +108,9 @@ namespace proj2018_2019
         //Outcome: reset default imagge size and Source
         private void Image_Leave(object sender, MouseEventArgs e)
         {
-            if(elipse.Name.Equals("image_profile"))
+            if(!img)
             {
-                image_profile.ImageSource = new BitmapImage(new Uri(@"C:\Users\USER\source\repos\proj2018-2019\proj2018-2019\man (2).png", UriKind.Relative));
+                image_profile.ImageSource = new BitmapImage(new Uri(@"C:\Users\USER\source\repos\proj2018-2019\proj2018-2019\Images\man (2).png", UriKind.Relative));
                 elipse.RenderTransform = new ScaleTransform(1, 1);
             }
             

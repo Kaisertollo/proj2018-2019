@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" />
   <xs:element name="Ajouter">
     <xs:complexType>
       <xs:sequence />
@@ -143,6 +144,18 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="LastIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilms">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="GetFilmsResult" nillable="true" type="q10:ArrayOfFilm" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

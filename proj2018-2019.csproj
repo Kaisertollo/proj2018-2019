@@ -67,10 +67,22 @@
     <Compile Include="AddMovies.xaml.cs">
       <DependentUpon>AddMovies.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
+    <Compile Include="AjouterActeur.xaml.cs">
+      <DependentUpon>AjouterActeur.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddAddress.xaml">
+    <Compile Include="ChercherStaff.xaml.cs">
+      <DependentUpon>ChercherStaff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Page Include="AjouterActeur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,7 +94,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AjouterStaff.xaml">
+    <Page Include="View\AjouterStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,17 +102,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChercherStaff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddAddress.xaml.cs">
+    <Compile Include="View\AddAddress.xaml.cs">
       <DependentUpon>AddAddress.xaml</DependentUpon>
     </Compile>
     <Compile Include="AddStaff.xaml.cs">
       <DependentUpon>AddStaff.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AjouterStaff.xaml.cs">
+    <Compile Include="View\AjouterStaff.xaml.cs">
       <DependentUpon>AjouterStaff.xaml</DependentUpon>
     </Compile>
     <Compile Include="AjouterStore.xaml.cs">
@@ -119,10 +135,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControl1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -152,6 +164,9 @@
     <None Include="Connected Services\ServiceReference1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReference1\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceReference1\proj2018_2019.ServiceReference1.Address.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -161,12 +176,37 @@
     <None Include="Connected Services\ServiceReference1\proj2018_2019.ServiceReference1.Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference1\proj2018_2019.ServiceReference1.Film.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference1\proj2018_2019.ServiceReference1.Staff.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference1\proj2018_2019.ServiceReference1.Store.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference2\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference2\proj2018_2019.ServiceReference2.Actor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\proj2018_2019.ServiceReference2.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\proj2018_2019.ServiceReference2.Film.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\proj2018_2019.ServiceReference2.Language.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\ThiouneService.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference1\item.disco" />
@@ -200,37 +241,72 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cell-phone-radiation.jpg" />
+    <Resource Include="Images\Movie Night.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Movie Night.png" />
+    <Resource Include="Images\Movie Night.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Movie Night.jpg" />
+    <Resource Include="Images\Movie Night %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Movie Night %281%29.png" />
+    <Resource Include="Images\man.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Action.png" />
+    <Resource Include="Images\man %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="man.png" />
+    <Resource Include="Images\man %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="man %281%29.png" />
+    <Resource Include="Images\add-user %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="man %282%29.png" />
+    <Resource Include="Images\pexels-photo-66134.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="add-user %282%29.png" />
+    <Resource Include="Images\pexels-photo-269850.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Movies\" />
+    <Folder Include="View\Staff\" />
+    <Folder Include="View\Store\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pexels-photo-66134.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pexels-photo-269850.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ddd.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ccc.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="aaa.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="popcorn-movie-party-entertainment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pexels-photo-1117132.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

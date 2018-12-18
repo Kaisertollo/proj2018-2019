@@ -55,7 +55,7 @@
         <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="922,627,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
         <Ellipse x:Name="elipse2" Margin="656,103,270,351" >
             <Ellipse.Fill>
-                <ImageBrush x:Name="image_List1" ImageSource="man (2).png"    />
+                <ImageBrush x:Name="image_List1" ImageSource="Images/man (2).png" />
             </Ellipse.Fill>
         </Ellipse>
 

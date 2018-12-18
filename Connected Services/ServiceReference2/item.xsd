@@ -94,4 +94,103 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetFilms">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilmsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="GetFilmsResult" nillable="true" type="q8:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="GetLangResult" nillable="true" type="q9:ArrayOfLanguage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCat">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="GetCatResult" nillable="true" type="q10:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActor">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="GetActorResult" nillable="true" type="q11:ArrayOfActor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterActor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="fa" nillable="true" type="q12:Actor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ajouterActorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastIdFilm">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LastIdFilmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LastIdFilmResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFilms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="F" nillable="true" type="q13:Film" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Actor" nillable="true" type="q14:ArrayOfActor" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="Category" nillable="true" type="q15:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFilmsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddActors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="A" nillable="true" type="q16:Actor" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" minOccurs="0" name="F" nillable="true" type="q17:ArrayOfFilm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddActorsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -372,6 +372,253 @@ namespace proj2018_2019.ServiceReference2 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Language", Namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest")]
+    [System.SerializableAttribute()]
+    public partial class Language : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private proj2018_2019.ServiceReference2.Film[] FilmsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LanguageIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private proj2018_2019.ServiceReference2.Film[] OFilmsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public proj2018_2019.ServiceReference2.Film[] Films {
+            get {
+                return this.FilmsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilmsField, value) != true)) {
+                    this.FilmsField = value;
+                    this.RaisePropertyChanged("Films");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LanguageID {
+            get {
+                return this.LanguageIDField;
+            }
+            set {
+                if ((this.LanguageIDField.Equals(value) != true)) {
+                    this.LanguageIDField = value;
+                    this.RaisePropertyChanged("LanguageID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public proj2018_2019.ServiceReference2.Film[] OFilms {
+            get {
+                return this.OFilmsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OFilmsField, value) != true)) {
+                    this.OFilmsField = value;
+                    this.RaisePropertyChanged("OFilms");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Category", Namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest")]
+    [System.SerializableAttribute()]
+    public partial class Category : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CategoryIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private proj2018_2019.ServiceReference2.Film_Category[] Film_CategoriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CategoryID {
+            get {
+                return this.CategoryIDField;
+            }
+            set {
+                if ((this.CategoryIDField.Equals(value) != true)) {
+                    this.CategoryIDField = value;
+                    this.RaisePropertyChanged("CategoryID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public proj2018_2019.ServiceReference2.Film_Category[] Film_Categories {
+            get {
+                return this.Film_CategoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Film_CategoriesField, value) != true)) {
+                    this.Film_CategoriesField = value;
+                    this.RaisePropertyChanged("Film_Categories");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Actor", Namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest")]
+    [System.SerializableAttribute()]
+    public partial class Actor : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ActorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastnameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ActorID {
+            get {
+                return this.ActorIDField;
+            }
+            set {
+                if ((this.ActorIDField.Equals(value) != true)) {
+                    this.ActorIDField = value;
+                    this.RaisePropertyChanged("ActorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Firstname {
+            get {
+                return this.FirstnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstnameField, value) != true)) {
+                    this.FirstnameField = value;
+                    this.RaisePropertyChanged("Firstname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Lastname {
+            get {
+                return this.LastnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastnameField, value) != true)) {
+                    this.LastnameField = value;
+                    this.RaisePropertyChanged("Lastname");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.IThiouneService")]
     public interface IThiouneService {
@@ -417,6 +664,54 @@ namespace proj2018_2019.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/Film_Par_Langue", ReplyAction="http://tempuri.org/IThiouneService/Film_Par_LangueResponse")]
         System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Film[]> Film_Par_LangueAsync(string langue);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetFilms", ReplyAction="http://tempuri.org/IThiouneService/GetFilmsResponse")]
+        proj2018_2019.ServiceReference2.Film[] GetFilms();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetFilms", ReplyAction="http://tempuri.org/IThiouneService/GetFilmsResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Film[]> GetFilmsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetLang", ReplyAction="http://tempuri.org/IThiouneService/GetLangResponse")]
+        proj2018_2019.ServiceReference2.Language[] GetLang();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetLang", ReplyAction="http://tempuri.org/IThiouneService/GetLangResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Language[]> GetLangAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetCat", ReplyAction="http://tempuri.org/IThiouneService/GetCatResponse")]
+        proj2018_2019.ServiceReference2.Category[] GetCat();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetCat", ReplyAction="http://tempuri.org/IThiouneService/GetCatResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Category[]> GetCatAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetActor", ReplyAction="http://tempuri.org/IThiouneService/GetActorResponse")]
+        proj2018_2019.ServiceReference2.Actor[] GetActor();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/GetActor", ReplyAction="http://tempuri.org/IThiouneService/GetActorResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Actor[]> GetActorAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/ajouterActor", ReplyAction="http://tempuri.org/IThiouneService/ajouterActorResponse")]
+        void ajouterActor(proj2018_2019.ServiceReference2.Actor fa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/ajouterActor", ReplyAction="http://tempuri.org/IThiouneService/ajouterActorResponse")]
+        System.Threading.Tasks.Task ajouterActorAsync(proj2018_2019.ServiceReference2.Actor fa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/LastIdFilm", ReplyAction="http://tempuri.org/IThiouneService/LastIdFilmResponse")]
+        int LastIdFilm();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/LastIdFilm", ReplyAction="http://tempuri.org/IThiouneService/LastIdFilmResponse")]
+        System.Threading.Tasks.Task<int> LastIdFilmAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/AddFilms", ReplyAction="http://tempuri.org/IThiouneService/AddFilmsResponse")]
+        void AddFilms(proj2018_2019.ServiceReference2.Film F, proj2018_2019.ServiceReference2.Actor[] Actor, proj2018_2019.ServiceReference2.Category[] Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/AddFilms", ReplyAction="http://tempuri.org/IThiouneService/AddFilmsResponse")]
+        System.Threading.Tasks.Task AddFilmsAsync(proj2018_2019.ServiceReference2.Film F, proj2018_2019.ServiceReference2.Actor[] Actor, proj2018_2019.ServiceReference2.Category[] Category);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/AddActors", ReplyAction="http://tempuri.org/IThiouneService/AddActorsResponse")]
+        void AddActors(proj2018_2019.ServiceReference2.Actor A, proj2018_2019.ServiceReference2.Film[] F);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IThiouneService/AddActors", ReplyAction="http://tempuri.org/IThiouneService/AddActorsResponse")]
+        System.Threading.Tasks.Task AddActorsAsync(proj2018_2019.ServiceReference2.Actor A, proj2018_2019.ServiceReference2.Film[] F);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -500,6 +795,70 @@ namespace proj2018_2019.ServiceReference2 {
         
         public System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Film[]> Film_Par_LangueAsync(string langue) {
             return base.Channel.Film_Par_LangueAsync(langue);
+        }
+        
+        public proj2018_2019.ServiceReference2.Film[] GetFilms() {
+            return base.Channel.GetFilms();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Film[]> GetFilmsAsync() {
+            return base.Channel.GetFilmsAsync();
+        }
+        
+        public proj2018_2019.ServiceReference2.Language[] GetLang() {
+            return base.Channel.GetLang();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Language[]> GetLangAsync() {
+            return base.Channel.GetLangAsync();
+        }
+        
+        public proj2018_2019.ServiceReference2.Category[] GetCat() {
+            return base.Channel.GetCat();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Category[]> GetCatAsync() {
+            return base.Channel.GetCatAsync();
+        }
+        
+        public proj2018_2019.ServiceReference2.Actor[] GetActor() {
+            return base.Channel.GetActor();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference2.Actor[]> GetActorAsync() {
+            return base.Channel.GetActorAsync();
+        }
+        
+        public void ajouterActor(proj2018_2019.ServiceReference2.Actor fa) {
+            base.Channel.ajouterActor(fa);
+        }
+        
+        public System.Threading.Tasks.Task ajouterActorAsync(proj2018_2019.ServiceReference2.Actor fa) {
+            return base.Channel.ajouterActorAsync(fa);
+        }
+        
+        public int LastIdFilm() {
+            return base.Channel.LastIdFilm();
+        }
+        
+        public System.Threading.Tasks.Task<int> LastIdFilmAsync() {
+            return base.Channel.LastIdFilmAsync();
+        }
+        
+        public void AddFilms(proj2018_2019.ServiceReference2.Film F, proj2018_2019.ServiceReference2.Actor[] Actor, proj2018_2019.ServiceReference2.Category[] Category) {
+            base.Channel.AddFilms(F, Actor, Category);
+        }
+        
+        public System.Threading.Tasks.Task AddFilmsAsync(proj2018_2019.ServiceReference2.Film F, proj2018_2019.ServiceReference2.Actor[] Actor, proj2018_2019.ServiceReference2.Category[] Category) {
+            return base.Channel.AddFilmsAsync(F, Actor, Category);
+        }
+        
+        public void AddActors(proj2018_2019.ServiceReference2.Actor A, proj2018_2019.ServiceReference2.Film[] F) {
+            base.Channel.AddActors(A, F);
+        }
+        
+        public System.Threading.Tasks.Task AddActorsAsync(proj2018_2019.ServiceReference2.Actor A, proj2018_2019.ServiceReference2.Film[] F) {
+            return base.Channel.AddActorsAsync(A, F);
         }
     }
 }

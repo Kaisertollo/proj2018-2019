@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="proj2018_2019.ChercherStaff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}"
+             TextElement.FontWeight="Medium"
+             TextElement.FontSize="14"
+             FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:proj2018_2019"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1157">
+    <Grid>
+        <ListView x:Name="List1" Margin="0,93,0,33" HorizontalAlignment="Left" Width="607" SelectedIndex="-1">
+            <ListView.View>
+                <GridView x:Name="View1">
+                    <GridViewColumn Header="YES/NO"  Width="100" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="chb" IsChecked="{Binding boole}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn  DisplayMemberBinding="{Binding Staff.Staff_ID}" Header="ID"  Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Staff.FirstName}"   Header="Prenom" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Staff.LastName}" Header="Nom" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Ellipse x:Name="elipse2" Margin="656,103,270,351" >
+            <Ellipse.Fill>
+                <ImageBrush x:Name="image_List1" ImageSource="man (2).png"    />
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBlock HorizontalAlignment="Left" Margin="666,376,0,0" TextWrapping="Wrap" Text="Prenom" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.714" Width="72"/>
+        <TextBlock HorizontalAlignment="Left" Margin="666,410,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="Prenom" Margin="727,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left"  x:Name="Nom" Margin="727,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Height="22"/>
+        <Button x:Name="Valider" Content="Debloquer" HorizontalAlignment="Left" Margin="656,500,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" RenderTransformOrigin="1.422,1.589"  />
+        <Button x:Name="Annuler" Content="Bloquer" HorizontalAlignment="Left" Margin="870,500,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
+    </Grid>
+</UserControl>

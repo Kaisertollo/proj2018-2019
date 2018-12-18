@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="fundamentals.wsdl" MetadataType="Wsdl" ID="f704be9b-9243-412b-8b83-c2b4ff97e7d8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?wsdl" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="47b895f7-b9e1-4a16-a1e7-18c80fe58fdc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?disco" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="73c6d0a1-7fda-411f-a3cb-48ea7503a481" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd2" />
+    <MetadataFile FileName="fundamentals.wsdl" MetadataType="Wsdl" ID="f704be9b-9243-412b-8b83-c2b4ff97e7d8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?wsdl" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="ca896347-8330-49d4-ad2b-78b6525a48e2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd1" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="303529c7-b4ca-4bd2-b225-92adfde18b2a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd0" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="1506cd95-f129-42a1-ad0a-dfe612026d51" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

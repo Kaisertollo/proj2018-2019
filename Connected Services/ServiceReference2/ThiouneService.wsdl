@@ -49,6 +49,54 @@
   <wsdl:message name="IThiouneService_Film_Par_Langue_OutputMessage">
     <wsdl:part name="parameters" element="tns:Film_Par_LangueResponse" />
   </wsdl:message>
+  <wsdl:message name="IThiouneService_GetFilms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilms" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetFilms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetLang_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLang" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetLang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetCat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCat" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetCat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActor" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_GetActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_ajouterActor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ajouterActor" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_ajouterActor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ajouterActorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_LastIdFilm_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastIdFilm" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_LastIdFilm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastIdFilmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_AddFilms_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFilms" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_AddFilms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFilmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_AddActors_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddActors" />
+  </wsdl:message>
+  <wsdl:message name="IThiouneService_AddActors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddActorsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IThiouneService">
     <wsdl:operation name="Ajouterfilm">
       <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/Ajouterfilm" message="tns:IThiouneService_Ajouterfilm_InputMessage" />
@@ -77,6 +125,38 @@
     <wsdl:operation name="Film_Par_Langue">
       <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/Film_Par_Langue" message="tns:IThiouneService_Film_Par_Langue_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/Film_Par_LangueResponse" message="tns:IThiouneService_Film_Par_Langue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/GetFilms" message="tns:IThiouneService_GetFilms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/GetFilmsResponse" message="tns:IThiouneService_GetFilms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/GetLang" message="tns:IThiouneService_GetLang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/GetLangResponse" message="tns:IThiouneService_GetLang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/GetCat" message="tns:IThiouneService_GetCat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/GetCatResponse" message="tns:IThiouneService_GetCat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/GetActor" message="tns:IThiouneService_GetActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/GetActorResponse" message="tns:IThiouneService_GetActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ajouterActor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/ajouterActor" message="tns:IThiouneService_ajouterActor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/ajouterActorResponse" message="tns:IThiouneService_ajouterActor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LastIdFilm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/LastIdFilm" message="tns:IThiouneService_LastIdFilm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/LastIdFilmResponse" message="tns:IThiouneService_LastIdFilm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFilms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/AddFilms" message="tns:IThiouneService_AddFilms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/AddFilmsResponse" message="tns:IThiouneService_AddFilms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddActors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IThiouneService/AddActors" message="tns:IThiouneService_AddActors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IThiouneService/AddActorsResponse" message="tns:IThiouneService_AddActors_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IThiouneService" type="tns:IThiouneService">
@@ -137,6 +217,78 @@
     </wsdl:operation>
     <wsdl:operation name="Film_Par_Langue">
       <soap:operation soapAction="http://tempuri.org/IThiouneService/Film_Par_Langue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilms">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/GetFilms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLang">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/GetLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCat">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/GetCat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActor">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/GetActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ajouterActor">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/ajouterActor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastIdFilm">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/LastIdFilm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFilms">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/AddFilms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddActors">
+      <soap:operation soapAction="http://tempuri.org/IThiouneService/AddActors" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

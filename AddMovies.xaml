@@ -13,22 +13,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1157">
     <Grid>
-        <Grid x:Name="GridIF" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="420" Margin="0,10,0,0" RenderTransformOrigin="0.5,0.5">
+        <Grid x:Name="GridIF" HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="465" Margin="0,10,0,0" RenderTransformOrigin="0.5,0.5">
 
             <materialDesign:PackIcon  Kind="Movie" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,10,0,458" />
             <TextBox x:Name="TitleTextBox" 
             materialDesign:HintAssist.Hint= "Title"  Margin="78,13,24,458" />
             <materialDesign:PackIcon  Kind="Language" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,61,0,407" />
-            <ComboBox x:Name="OriginalLanguageComboBox" materialDesign:HintAssist.Hint="langue original" Margin="78,65,96,407" ></ComboBox>
+            <ComboBox x:Name="OriginalLanguageComboBox" materialDesign:HintAssist.Hint="langue original" Margin="78,65,96,407" IsEditable="True"></ComboBox>
             <materialDesign:PackIcon  Kind="Language" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,118,0,350" />
-            <ComboBox x:Name="LanguageComboBox" materialDesign:HintAssist.Hint="langue" Margin="78,121,96,350" ></ComboBox>
-            <Slider x:Name="Yearslider"  TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1920"  Maximum="2018"   IsSelectionRangeEnabled="True" Margin="21,228,0,238" ValueChanged="Slider_ValueChanged" />
+            <ComboBox x:Name="LanguageComboBox" materialDesign:HintAssist.Hint="langue" Margin="78,121,96,350"  IsEditable="True"></ComboBox>
+            <Slider x:Name="Yearslider"  TickFrequency="5" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="1920"  Maximum="2018"   IsSelectionRangeEnabled="True" Margin="21,228,0,233" ValueChanged="Slider_ValueChanged" />
             <TextBlock HorizontalAlignment="Left" Margin="78,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" FontSize="16" Text="Année de Sortie:"/>
             <Label HorizontalAlignment="Left" Margin="220,201,0,0" Content="{Binding ElementName=Yearslider, Path=Value}" VerticalAlignment="Top" Height="22" Width="65" RenderTransformOrigin="0.524,0.334" />
             <Label HorizontalAlignment="Left" Margin="220,282,0,0" Content="{Binding ElementName=PriceSlider, Path=Value}" VerticalAlignment="Top" Height="22" Width="46" RenderTransformOrigin="0.405,2.683" />
             <materialDesign:PackIcon  Kind="MoneyUsd" Width="39" Height="37" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="21,267,0,196" />
             <TextBox x:Name="RentalRate" 
-                materialDesign:HintAssist.Hint= "Prix Location"  Margin="78,275,221,196" />
+                materialDesign:HintAssist.Hint= "Prix Location"  Margin="78,275,221,196" TextChanged="RentalRate_TextChanged" />
             <TextBox x:Name="Lenght" 
                 materialDesign:HintAssist.Hint= "Durée Film"  Margin="78,385,221,86" />
             <TextBox x:Name="RentalDuration" 
@@ -37,15 +37,23 @@
             <materialDesign:PackIcon  Kind="Watch" Width="39" Height="37" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="21,385,0,78" />
 
             <materialDesign:PackIcon  Kind="MoneyUsd" Width="39" Height="37" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="21,436,0,27" />
-            <TextBox x:Name="RepacementCost" 
+            <TextBox x:Name="ReplacementCost" 
                 materialDesign:HintAssist.Hint= "Prix Location"  Margin="78,436,221,35" />
-            <ComboBox x:Name="SpecialFeatures" materialDesign:HintAssist.Hint="Caractéristiques spéciales" Margin="78,481,154,-9" />
+            <ComboBox x:Name="SpecialFeatures" materialDesign:HintAssist.Hint="Caractéristiques spéciales" Margin="78,481,199,-9" />
             <materialDesign:PackIcon  Kind="ExtraLife" Width="39" Height="37" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="21,478,0,-15" />
+            <materialDesign:PackIcon  x:Name="Uno"  Kind="Star" Width="22" Height="27" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="309,304,0,169" Visibility="Hidden"/>
+            <materialDesign:PackIcon x:Name="des" Kind="Star" Width="22" Height="27" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="332,304,0,169" Visibility="Hidden"/>
+            <materialDesign:PackIcon x:Name="tres" Kind="Star" Width="22" Height="27" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="354,304,0,169" Visibility="Hidden"/>
+            <materialDesign:PackIcon x:Name="quatro" Kind="Star" Width="22" Height="27" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="381,304,0,169" Visibility="Hidden"/>
+            <materialDesign:PackIcon x:Name="cinquo" Kind="Star" Width="22" Height="27" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="408,304,0,169" Visibility="Hidden"/>
+    
+            <Slider x:Name="Rating_Slider"  TickFrequency="1" Orientation="Horizontal" TickPlacement="BottomRight" Minimum="0"  Maximum="5"   IsSelectionRangeEnabled="True" Margin="331,331,46,130" ValueChanged="Rating_Slider_ValueChanged" RenderTransformOrigin="0.4,0.916" />
+            <TextBlock HorizontalAlignment="Left" Margin="309,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" FontSize="16" Text="Rating"/>
 
 
         </Grid>
         <TextBlock Text="Casting" Margin="606,19,457,648" FontSize="22"></TextBlock>
-        <ListView x:Name="List1" Margin="529,62,0,393" HorizontalAlignment="Left" Width="351" SelectedIndex="-1" >
+        <ListView x:Name="List1" Margin="513,62,0,393" HorizontalAlignment="Left" Width="362" SelectedIndex="-1" >
             <ListView.View>
                 <GridView x:Name="View1">
                     <GridViewColumn Header="YES/NO"  Width="100" >
@@ -61,7 +69,7 @@
             </ListView.View>
         </ListView>
         <materialDesign:PackIcon  Kind="People" Width="59" Height="42" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="529,10,0,648" />
-        <ListView x:Name="List1_Copy" Margin="888,57,0,393" HorizontalAlignment="Left" Width="259" SelectedIndex="-1" >
+        <ListView x:Name="List1C" Margin="880,62,0,388" HorizontalAlignment="Left" Width="259" SelectedIndex="-1" >
             <ListView.View>
                 <GridView x:Name="View2">
                     <GridViewColumn Header="YES/NO"  Width="100" >
@@ -71,7 +79,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn  DisplayMemberBinding="{Binding Staff.Staff_ID}" Header="Categorie"  Width="100"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding Category.Name}" Header="Categorie"  Width="100"/>
 
 
                 </GridView>
@@ -89,7 +97,7 @@
             </ListView.View>
         </ListView>
         <TextBox x:Name="Description" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="10,540,692,0" VerticalAlignment="Top" Height="104" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Description Du Film"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="500,593,0,0" VerticalAlignment="Top" Width="104" Background="#FF0AB219"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="500,593,0,0" VerticalAlignment="Top" Width="104" Background="#FF0AB219" Click="Button_Click"/>
 
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="657,593,0,0" VerticalAlignment="Top" Width="107" Background="#FFD31910" RenderTransformOrigin="-0.676,0.796"/>
         <materialDesign:PackIcon  Kind="Shop" Width="59" Height="42" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="888,340,0,318" />

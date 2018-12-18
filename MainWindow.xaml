@@ -105,7 +105,7 @@
                     </StackPanel>
                 </ListViewItem>
             </ListView>
-            <Image HorizontalAlignment="Left" Height="316" Margin="62,366,0,0" VerticalAlignment="Top" Width="266" Source="Movie Night (1).png" RenderTransformOrigin="0.623,0.51"/>
+            <Image HorizontalAlignment="Left" Height="316" Margin="62,366,0,0" VerticalAlignment="Top" Width="266" Source="Images\Movie Night (1).png" RenderTransformOrigin="0.623,0.51"/>
 
         </Grid>
         <Grid x:Name="main2Grid" HorizontalAlignment="Left" Height="710" Margin="333,0,0,0" VerticalAlignment="Top" Width="1157">

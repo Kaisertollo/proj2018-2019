@@ -17,7 +17,7 @@
             <Grid HorizontalAlignment="Left" Height="105" Margin="94,21,0,0" VerticalAlignment="Top" Width="170" >
                 <Ellipse x:Name="elipse" Margin="10,-12,0,-39" MouseDown="Image_Click" MouseEnter="image_Hover" MouseLeave="Image_Leave">
                     <Ellipse.Fill>
-                        <ImageBrush x:Name="image_profile" ImageSource="man (2).png"    />
+                        <ImageBrush x:Name="image_profile" ImageSource="Images/man (2).png"    />
                     </Ellipse.Fill>
                 </Ellipse>
             </Grid>
@@ -34,7 +34,7 @@
                 <TextBox x:Name="MailTextBox" 
             materialDesign:HintAssist.Hint= "Mail" Margin="65,108,37,97"/>
                 <materialDesign:PackIcon x:Name="iconAd" Kind="Location" Width="29" Height="32" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="31,157,0,46" />
-                <ComboBox x:Name="AdresseComboBox" materialDesign:HintAssist.Hint="Addresse" Margin="65,160,76,46" ></ComboBox>
+                <ComboBox x:Name="AdresseComboBox" materialDesign:HintAssist.Hint="Addresse" materialDesign:HintAssist.HintOpacity=".26"  IsEditable="True" Margin="65,160,76,46" ></ComboBox>
 
                 <materialDesign:PackIcon Visibility="Collapsed" x:Name="addAddresse" Kind="AddCircle" Width="40" Height="40" VerticalAlignment="Center"  MouseDown="AddAddress" RenderTransformOrigin="3.407,1.249" Margin="279,160,0,34" Foreground="#DD16CF04" />
             </Grid>
@@ -54,7 +54,11 @@
 
         </Grid>
         <Grid HorizontalAlignment="Left" Height="700" Margin="400,0,0,0" VerticalAlignment="Top" Width="757">
-            <Image Margin="-9,0,0,0" Source="pexels-photo-66134.jpeg" Stretch="Fill"/>
+           
+            <Image Source="ccc.jpeg" Stretch="Fill"/>
+
+
+
         </Grid>
 
     </Grid>

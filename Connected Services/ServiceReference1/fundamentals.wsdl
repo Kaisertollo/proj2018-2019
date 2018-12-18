@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ProjetBaye_Sakila/fundamentals/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="Ifundamentals_Ajouter_InputMessage">
@@ -79,6 +80,12 @@
   <wsdl:message name="Ifundamentals_LastId_OutputMessage">
     <wsdl:part name="parameters" element="tns:LastIdResponse" />
   </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetFilms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilms" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetFilms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmsResponse" />
+  </wsdl:message>
   <wsdl:portType name="Ifundamentals">
     <wsdl:operation name="Ajouter">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/Ajouter" message="tns:Ifundamentals_Ajouter_InputMessage" />
@@ -127,6 +134,10 @@
     <wsdl:operation name="LastId">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/LastId" message="tns:Ifundamentals_LastId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/LastIdResponse" message="tns:Ifundamentals_LastId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilms">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetFilms" message="tns:Ifundamentals_GetFilms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetFilmsResponse" message="tns:Ifundamentals_GetFilms_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_Ifundamentals" type="tns:Ifundamentals">
@@ -232,6 +243,15 @@
     </wsdl:operation>
     <wsdl:operation name="LastId">
       <soap:operation soapAction="http://tempuri.org/Ifundamentals/LastId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilms">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetFilms" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

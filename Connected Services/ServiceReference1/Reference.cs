@@ -606,6 +606,227 @@ namespace proj2018_2019.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Film", Namespace="http://schemas.datacontract.org/2004/07/PROJETBAYE2018.Modeltest")]
+    [System.SerializableAttribute()]
+    public partial class Film : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Film_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LanguageIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LenghtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Original_Language_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RatingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Release_yearField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Rental_durationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Rental_rateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal Replacement_costField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Special_featuresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Film_ID {
+            get {
+                return this.Film_IDField;
+            }
+            set {
+                if ((this.Film_IDField.Equals(value) != true)) {
+                    this.Film_IDField = value;
+                    this.RaisePropertyChanged("Film_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LanguageID {
+            get {
+                return this.LanguageIDField;
+            }
+            set {
+                if ((this.LanguageIDField.Equals(value) != true)) {
+                    this.LanguageIDField = value;
+                    this.RaisePropertyChanged("LanguageID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Lenght {
+            get {
+                return this.LenghtField;
+            }
+            set {
+                if ((this.LenghtField.Equals(value) != true)) {
+                    this.LenghtField = value;
+                    this.RaisePropertyChanged("Lenght");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Original_Language_ID {
+            get {
+                return this.Original_Language_IDField;
+            }
+            set {
+                if ((this.Original_Language_IDField.Equals(value) != true)) {
+                    this.Original_Language_IDField = value;
+                    this.RaisePropertyChanged("Original_Language_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Rating {
+            get {
+                return this.RatingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RatingField, value) != true)) {
+                    this.RatingField = value;
+                    this.RaisePropertyChanged("Rating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Release_year {
+            get {
+                return this.Release_yearField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Release_yearField, value) != true)) {
+                    this.Release_yearField = value;
+                    this.RaisePropertyChanged("Release_year");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Rental_duration {
+            get {
+                return this.Rental_durationField;
+            }
+            set {
+                if ((this.Rental_durationField.Equals(value) != true)) {
+                    this.Rental_durationField = value;
+                    this.RaisePropertyChanged("Rental_duration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Rental_rate {
+            get {
+                return this.Rental_rateField;
+            }
+            set {
+                if ((this.Rental_rateField.Equals(value) != true)) {
+                    this.Rental_rateField = value;
+                    this.RaisePropertyChanged("Rental_rate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Replacement_cost {
+            get {
+                return this.Replacement_costField;
+            }
+            set {
+                if ((this.Replacement_costField.Equals(value) != true)) {
+                    this.Replacement_costField = value;
+                    this.RaisePropertyChanged("Replacement_cost");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Special_features {
+            get {
+                return this.Special_featuresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Special_featuresField, value) != true)) {
+                    this.Special_featuresField = value;
+                    this.RaisePropertyChanged("Special_features");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.Ifundamentals")]
     public interface Ifundamentals {
@@ -681,6 +902,12 @@ namespace proj2018_2019.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastId", ReplyAction="http://tempuri.org/Ifundamentals/LastIdResponse")]
         System.Threading.Tasks.Task<int> LastIdAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetFilms", ReplyAction="http://tempuri.org/Ifundamentals/GetFilmsResponse")]
+        proj2018_2019.ServiceReference1.Film[] GetFilms();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetFilms", ReplyAction="http://tempuri.org/Ifundamentals/GetFilmsResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Film[]> GetFilmsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -804,6 +1031,14 @@ namespace proj2018_2019.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> LastIdAsync() {
             return base.Channel.LastIdAsync();
+        }
+        
+        public proj2018_2019.ServiceReference1.Film[] GetFilms() {
+            return base.Channel.GetFilms();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Film[]> GetFilmsAsync() {
+            return base.Channel.GetFilmsAsync();
         }
     }
 }

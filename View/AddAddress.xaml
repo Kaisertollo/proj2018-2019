@@ -41,7 +41,8 @@
         <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="48,525,0,0" VerticalAlignment="Top" Width="99" Background="#FF109528" Click="Valider_Click"/>
         <Button x:Name="Annuler" Content="Annuler" HorizontalAlignment="Left" Margin="237,525,0,0" VerticalAlignment="Top" Width="103" Background="#FFEC1313"/>
         <Grid HorizontalAlignment="Left" Height="700" Margin="410,0,0,0" VerticalAlignment="Top" Width="747">
-            <Image Source="pexels-photo-269850.jpeg" Stretch="Fill"/>
+            <Image Source="/proj2018-2019;component/aaa.jpeg" Stretch="Fill"/>
+
         </Grid>
 
     </Grid>

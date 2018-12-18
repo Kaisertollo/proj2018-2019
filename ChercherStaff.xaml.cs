@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace proj2018_2019
 {
     /// <summary>
-    /// Logique d'interaction pour UserControl1.xaml
+    /// Logique d'interaction pour ChercherStaff.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class ChercherStaff : UserControl
     {
-        public UserControl1()
+        public ChercherStaff()
         {
             InitializeComponent();
         }
