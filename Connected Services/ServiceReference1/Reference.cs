@@ -15,83 +15,6 @@ namespace proj2018_2019.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Store", Namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model")]
-    [System.SerializableAttribute()]
-    public partial class Store : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> Address_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> Manager_Staff_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Store_IDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Address_ID {
-            get {
-                return this.Address_IDField;
-            }
-            set {
-                if ((this.Address_IDField.Equals(value) != true)) {
-                    this.Address_IDField = value;
-                    this.RaisePropertyChanged("Address_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Manager_Staff_ID {
-            get {
-                return this.Manager_Staff_IDField;
-            }
-            set {
-                if ((this.Manager_Staff_IDField.Equals(value) != true)) {
-                    this.Manager_Staff_IDField = value;
-                    this.RaisePropertyChanged("Manager_Staff_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Store_ID {
-            get {
-                return this.Store_IDField;
-            }
-            set {
-                if ((this.Store_IDField.Equals(value) != true)) {
-                    this.Store_IDField = value;
-                    this.RaisePropertyChanged("Store_ID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Country", Namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model")]
     [System.SerializableAttribute()]
     public partial class Country : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -262,6 +185,224 @@ namespace proj2018_2019.ServiceReference1 {
                 if ((this.Country_IDField.Equals(value) != true)) {
                     this.Country_IDField = value;
                     this.RaisePropertyChanged("Country_ID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model")]
+    [System.SerializableAttribute()]
+    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Address_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address_LibField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address_Lib2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> City_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DistrictField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Postal_CodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Address_ID {
+            get {
+                return this.Address_IDField;
+            }
+            set {
+                if ((this.Address_IDField.Equals(value) != true)) {
+                    this.Address_IDField = value;
+                    this.RaisePropertyChanged("Address_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address_Lib {
+            get {
+                return this.Address_LibField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address_LibField, value) != true)) {
+                    this.Address_LibField = value;
+                    this.RaisePropertyChanged("Address_Lib");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address_Lib2 {
+            get {
+                return this.Address_Lib2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address_Lib2Field, value) != true)) {
+                    this.Address_Lib2Field = value;
+                    this.RaisePropertyChanged("Address_Lib2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> City_ID {
+            get {
+                return this.City_IDField;
+            }
+            set {
+                if ((this.City_IDField.Equals(value) != true)) {
+                    this.City_IDField = value;
+                    this.RaisePropertyChanged("City_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string District {
+            get {
+                return this.DistrictField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictField, value) != true)) {
+                    this.DistrictField = value;
+                    this.RaisePropertyChanged("District");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Postal_Code {
+            get {
+                return this.Postal_CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Postal_CodeField, value) != true)) {
+                    this.Postal_CodeField = value;
+                    this.RaisePropertyChanged("Postal_Code");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Store", Namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model")]
+    [System.SerializableAttribute()]
+    public partial class Store : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> Address_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> Manager_Staff_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Store_IDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Address_ID {
+            get {
+                return this.Address_IDField;
+            }
+            set {
+                if ((this.Address_IDField.Equals(value) != true)) {
+                    this.Address_IDField = value;
+                    this.RaisePropertyChanged("Address_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Manager_Staff_ID {
+            get {
+                return this.Manager_Staff_IDField;
+            }
+            set {
+                if ((this.Manager_Staff_IDField.Equals(value) != true)) {
+                    this.Manager_Staff_IDField = value;
+                    this.RaisePropertyChanged("Manager_Staff_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Store_ID {
+            get {
+                return this.Store_IDField;
+            }
+            set {
+                if ((this.Store_IDField.Equals(value) != true)) {
+                    this.Store_IDField = value;
+                    this.RaisePropertyChanged("Store_ID");
                 }
             }
         }
@@ -451,147 +592,6 @@ namespace proj2018_2019.ServiceReference1 {
                 if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
                     this.UserNameField = value;
                     this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model")]
-    [System.SerializableAttribute()]
-    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Address_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Address_LibField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Address_Lib2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> City_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DistrictField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PhoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Postal_CodeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Address_ID {
-            get {
-                return this.Address_IDField;
-            }
-            set {
-                if ((this.Address_IDField.Equals(value) != true)) {
-                    this.Address_IDField = value;
-                    this.RaisePropertyChanged("Address_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address_Lib {
-            get {
-                return this.Address_LibField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Address_LibField, value) != true)) {
-                    this.Address_LibField = value;
-                    this.RaisePropertyChanged("Address_Lib");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address_Lib2 {
-            get {
-                return this.Address_Lib2Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Address_Lib2Field, value) != true)) {
-                    this.Address_Lib2Field = value;
-                    this.RaisePropertyChanged("Address_Lib2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> City_ID {
-            get {
-                return this.City_IDField;
-            }
-            set {
-                if ((this.City_IDField.Equals(value) != true)) {
-                    this.City_IDField = value;
-                    this.RaisePropertyChanged("City_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string District {
-            get {
-                return this.DistrictField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DistrictField, value) != true)) {
-                    this.DistrictField = value;
-                    this.RaisePropertyChanged("District");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Phone {
-            get {
-                return this.PhoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
-                    this.PhoneField = value;
-                    this.RaisePropertyChanged("Phone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Postal_Code {
-            get {
-                return this.Postal_CodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Postal_CodeField, value) != true)) {
-                    this.Postal_CodeField = value;
-                    this.RaisePropertyChanged("Postal_Code");
                 }
             }
         }
@@ -837,23 +837,11 @@ namespace proj2018_2019.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/Ajouter", ReplyAction="http://tempuri.org/Ifundamentals/AjouterResponse")]
         System.Threading.Tasks.Task AjouterAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStores", ReplyAction="http://tempuri.org/Ifundamentals/GetStoresResponse")]
-        proj2018_2019.ServiceReference1.Store[] GetStores();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStores", ReplyAction="http://tempuri.org/Ifundamentals/GetStoresResponse")]
-        System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Store[]> GetStoresAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetCountries", ReplyAction="http://tempuri.org/Ifundamentals/GetCountriesResponse")]
         proj2018_2019.ServiceReference1.Country[] GetCountries();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetCountries", ReplyAction="http://tempuri.org/Ifundamentals/GetCountriesResponse")]
         System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Country[]> GetCountriesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStaffs", ReplyAction="http://tempuri.org/Ifundamentals/GetStaffsResponse")]
-        proj2018_2019.ServiceReference1.Staff[] GetStaffs();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStaffs", ReplyAction="http://tempuri.org/Ifundamentals/GetStaffsResponse")]
-        System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Staff[]> GetStaffsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetCities", ReplyAction="http://tempuri.org/Ifundamentals/GetCitiesResponse")]
         proj2018_2019.ServiceReference1.City[] GetCities();
@@ -873,11 +861,23 @@ namespace proj2018_2019.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddStores", ReplyAction="http://tempuri.org/Ifundamentals/AddStoresResponse")]
         System.Threading.Tasks.Task AddStoresAsync(proj2018_2019.ServiceReference1.Store store);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddStaff", ReplyAction="http://tempuri.org/Ifundamentals/AddStaffResponse")]
-        void AddStaff(proj2018_2019.ServiceReference1.Staff staff);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStores", ReplyAction="http://tempuri.org/Ifundamentals/GetStoresResponse")]
+        proj2018_2019.ServiceReference1.Store[] GetStores();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddStaff", ReplyAction="http://tempuri.org/Ifundamentals/AddStaffResponse")]
-        System.Threading.Tasks.Task AddStaffAsync(proj2018_2019.ServiceReference1.Staff staff);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStores", ReplyAction="http://tempuri.org/Ifundamentals/GetStoresResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Store[]> GetStoresAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff_Store", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaff_StoreResponse")]
+        void UpdateStaff_Store(int idStaff, int IdStore);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff_Store", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaff_StoreResponse")]
+        System.Threading.Tasks.Task UpdateStaff_StoreAsync(int idStaff, int IdStore);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStaffs", ReplyAction="http://tempuri.org/Ifundamentals/GetStaffsResponse")]
+        proj2018_2019.ServiceReference1.Staff[] GetStaffs();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetStaffs", ReplyAction="http://tempuri.org/Ifundamentals/GetStaffsResponse")]
+        System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Staff[]> GetStaffsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddStaff2", ReplyAction="http://tempuri.org/Ifundamentals/AddStaff2Response")]
         string AddStaff2(proj2018_2019.ServiceReference1.Staff staff);
@@ -885,23 +885,35 @@ namespace proj2018_2019.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddStaff2", ReplyAction="http://tempuri.org/Ifundamentals/AddStaff2Response")]
         System.Threading.Tasks.Task<string> AddStaff2Async(proj2018_2019.ServiceReference1.Staff staff);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
+        void UpdateStaff(proj2018_2019.ServiceReference1.Staff S, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
+        System.Threading.Tasks.Task UpdateStaffAsync(proj2018_2019.ServiceReference1.Staff S, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/Block", ReplyAction="http://tempuri.org/Ifundamentals/BlockResponse")]
+        void Block(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/Block", ReplyAction="http://tempuri.org/Ifundamentals/BlockResponse")]
+        System.Threading.Tasks.Task BlockAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/DeBlock", ReplyAction="http://tempuri.org/Ifundamentals/DeBlockResponse")]
+        void DeBlock(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/DeBlock", ReplyAction="http://tempuri.org/Ifundamentals/DeBlockResponse")]
+        System.Threading.Tasks.Task DeBlockAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddAddress", ReplyAction="http://tempuri.org/Ifundamentals/AddAddressResponse")]
         void AddAddress(proj2018_2019.ServiceReference1.Address address);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/AddAddress", ReplyAction="http://tempuri.org/Ifundamentals/AddAddressResponse")]
         System.Threading.Tasks.Task AddAddressAsync(proj2018_2019.ServiceReference1.Address address);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
-        void UpdateStaff(int idStaff, int IdStore);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastIdStore", ReplyAction="http://tempuri.org/Ifundamentals/LastIdStoreResponse")]
+        int LastIdStore();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/UpdateStaff", ReplyAction="http://tempuri.org/Ifundamentals/UpdateStaffResponse")]
-        System.Threading.Tasks.Task UpdateStaffAsync(int idStaff, int IdStore);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastId", ReplyAction="http://tempuri.org/Ifundamentals/LastIdResponse")]
-        int LastId();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastId", ReplyAction="http://tempuri.org/Ifundamentals/LastIdResponse")]
-        System.Threading.Tasks.Task<int> LastIdAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/LastIdStore", ReplyAction="http://tempuri.org/Ifundamentals/LastIdStoreResponse")]
+        System.Threading.Tasks.Task<int> LastIdStoreAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Ifundamentals/GetFilms", ReplyAction="http://tempuri.org/Ifundamentals/GetFilmsResponse")]
         proj2018_2019.ServiceReference1.Film[] GetFilms();
@@ -945,28 +957,12 @@ namespace proj2018_2019.ServiceReference1 {
             return base.Channel.AjouterAsync();
         }
         
-        public proj2018_2019.ServiceReference1.Store[] GetStores() {
-            return base.Channel.GetStores();
-        }
-        
-        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Store[]> GetStoresAsync() {
-            return base.Channel.GetStoresAsync();
-        }
-        
         public proj2018_2019.ServiceReference1.Country[] GetCountries() {
             return base.Channel.GetCountries();
         }
         
         public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Country[]> GetCountriesAsync() {
             return base.Channel.GetCountriesAsync();
-        }
-        
-        public proj2018_2019.ServiceReference1.Staff[] GetStaffs() {
-            return base.Channel.GetStaffs();
-        }
-        
-        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Staff[]> GetStaffsAsync() {
-            return base.Channel.GetStaffsAsync();
         }
         
         public proj2018_2019.ServiceReference1.City[] GetCities() {
@@ -993,12 +989,28 @@ namespace proj2018_2019.ServiceReference1 {
             return base.Channel.AddStoresAsync(store);
         }
         
-        public void AddStaff(proj2018_2019.ServiceReference1.Staff staff) {
-            base.Channel.AddStaff(staff);
+        public proj2018_2019.ServiceReference1.Store[] GetStores() {
+            return base.Channel.GetStores();
         }
         
-        public System.Threading.Tasks.Task AddStaffAsync(proj2018_2019.ServiceReference1.Staff staff) {
-            return base.Channel.AddStaffAsync(staff);
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Store[]> GetStoresAsync() {
+            return base.Channel.GetStoresAsync();
+        }
+        
+        public void UpdateStaff_Store(int idStaff, int IdStore) {
+            base.Channel.UpdateStaff_Store(idStaff, IdStore);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStaff_StoreAsync(int idStaff, int IdStore) {
+            return base.Channel.UpdateStaff_StoreAsync(idStaff, IdStore);
+        }
+        
+        public proj2018_2019.ServiceReference1.Staff[] GetStaffs() {
+            return base.Channel.GetStaffs();
+        }
+        
+        public System.Threading.Tasks.Task<proj2018_2019.ServiceReference1.Staff[]> GetStaffsAsync() {
+            return base.Channel.GetStaffsAsync();
         }
         
         public string AddStaff2(proj2018_2019.ServiceReference1.Staff staff) {
@@ -1009,6 +1021,30 @@ namespace proj2018_2019.ServiceReference1 {
             return base.Channel.AddStaff2Async(staff);
         }
         
+        public void UpdateStaff(proj2018_2019.ServiceReference1.Staff S, int id) {
+            base.Channel.UpdateStaff(S, id);
+        }
+        
+        public System.Threading.Tasks.Task UpdateStaffAsync(proj2018_2019.ServiceReference1.Staff S, int id) {
+            return base.Channel.UpdateStaffAsync(S, id);
+        }
+        
+        public void Block(int id) {
+            base.Channel.Block(id);
+        }
+        
+        public System.Threading.Tasks.Task BlockAsync(int id) {
+            return base.Channel.BlockAsync(id);
+        }
+        
+        public void DeBlock(int id) {
+            base.Channel.DeBlock(id);
+        }
+        
+        public System.Threading.Tasks.Task DeBlockAsync(int id) {
+            return base.Channel.DeBlockAsync(id);
+        }
+        
         public void AddAddress(proj2018_2019.ServiceReference1.Address address) {
             base.Channel.AddAddress(address);
         }
@@ -1017,20 +1053,12 @@ namespace proj2018_2019.ServiceReference1 {
             return base.Channel.AddAddressAsync(address);
         }
         
-        public void UpdateStaff(int idStaff, int IdStore) {
-            base.Channel.UpdateStaff(idStaff, IdStore);
+        public int LastIdStore() {
+            return base.Channel.LastIdStore();
         }
         
-        public System.Threading.Tasks.Task UpdateStaffAsync(int idStaff, int IdStore) {
-            return base.Channel.UpdateStaffAsync(idStaff, IdStore);
-        }
-        
-        public int LastId() {
-            return base.Channel.LastId();
-        }
-        
-        public System.Threading.Tasks.Task<int> LastIdAsync() {
-            return base.Channel.LastIdAsync();
+        public System.Threading.Tasks.Task<int> LastIdStoreAsync() {
+            return base.Channel.LastIdStoreAsync();
         }
         
         public proj2018_2019.ServiceReference1.Film[] GetFilms() {

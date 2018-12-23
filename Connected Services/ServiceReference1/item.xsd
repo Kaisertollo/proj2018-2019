@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProjetBaye_Sakila.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfStore">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Store" nillable="true" type="tns:Store" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfStore" nillable="true" type="tns:ArrayOfStore" />
-  <xs:complexType name="Store">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Address_ID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Manager_Staff_ID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Store_ID" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Store" nillable="true" type="tns:Store" />
   <xs:complexType name="ArrayOfCountry">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
@@ -44,6 +30,38 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Address_Lib" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address_Lib2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postal_Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="Store">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Manager_Staff_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Store_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Store" nillable="true" type="tns:Store" />
+  <xs:complexType name="ArrayOfStore">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Store" nillable="true" type="tns:Store" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStore" nillable="true" type="tns:ArrayOfStore" />
   <xs:complexType name="ArrayOfStaff">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Staff" nillable="true" type="tns:Staff" />
@@ -65,22 +83,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Staff" nillable="true" type="tns:Staff" />
-  <xs:complexType name="ArrayOfAddress">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
-  <xs:complexType name="Address">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Address_ID" type="xs:int" />
-      <xs:element minOccurs="0" name="Address_Lib" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Address_Lib2" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="City_ID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Postal_Code" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Address" nillable="true" type="tns:Address" />
 </xs:schema>

@@ -11,7 +11,7 @@
         xmlns:local="clr-namespace:proj2018_2019"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="710" Width="1500" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="710" Width="1500" ResizeMode="NoResize">
     <Grid x:Name="mainGrid" Background="#FFEEEEEE" Margin="0,0,2,0">
         <Grid x:Name="sideGrid" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="328"  Background="#FF222222" Margin="0,0,0,0">
 

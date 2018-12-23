@@ -63,8 +63,8 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Actor.FirstName}"   Header="Prenom" Width="150"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Actor.LastName}" Header="Nom" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Actor.Firstname}"   Header="Prenom" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Actor.Lastname}" Header="Nom" Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -87,7 +87,7 @@
         </ListView>
         <materialDesign:PackIcon  Kind="MovieRoll" Width="59" Height="42" VerticalAlignment="Center"  RenderTransformOrigin="3.407,1.249" Margin="888,10,0,648" />
         <TextBlock Text="Categorie" Margin="980,19,68,648" FontSize="22"/>
-        <ListView x:Name="List1_Copy1" Margin="769,387,0,41" HorizontalAlignment="Left" Width="388" SelectedIndex="-1" >
+        <ListView x:Name="List1_C" Margin="769,387,0,41" HorizontalAlignment="Left" Width="388" SelectedIndex="-1" >
             <ListView.View>
                 <GridView x:Name="View3">
                     <GridViewColumn DisplayMemberBinding="{Binding Actor.FirstName}"   Header="IdStore" Width="150"/>

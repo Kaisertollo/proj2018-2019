@@ -76,6 +76,10 @@ namespace proj2018_2019
                     main2Grid.Children.Clear();
                     main2Grid.Children.Add(new AddStaff());
                     break;
+                case 1:
+                    main2Grid.Children.Clear();
+                    main2Grid.Children.Add(new ChercherStaff());
+                    break;
             }
        }
 

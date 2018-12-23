@@ -71,15 +71,15 @@ namespace proj2018_2019
             {
                 ActorsL v32 = new ActorsL();
                 v32.Actor = a;
-                MessageBox.Show(""+a.Firstname);
                 v32.boole = false;
+              
                 listAL.Add(v32);
             }
             List1.ItemsSource = listAL;
             List1C.ItemsSource = listcL;
             SpecialFeatures.ItemsSource = array;
         }
-
+        
         private void LanguageComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            

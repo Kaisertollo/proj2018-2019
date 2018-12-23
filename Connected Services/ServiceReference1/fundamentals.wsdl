@@ -14,23 +14,11 @@
   <wsdl:message name="Ifundamentals_Ajouter_OutputMessage">
     <wsdl:part name="parameters" element="tns:AjouterResponse" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_GetStores_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetStores" />
-  </wsdl:message>
-  <wsdl:message name="Ifundamentals_GetStores_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetStoresResponse" />
-  </wsdl:message>
   <wsdl:message name="Ifundamentals_GetCountries_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCountries" />
   </wsdl:message>
   <wsdl:message name="Ifundamentals_GetCountries_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
-  </wsdl:message>
-  <wsdl:message name="Ifundamentals_GetStaffs_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetStaffs" />
-  </wsdl:message>
-  <wsdl:message name="Ifundamentals_GetStaffs_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetStaffsResponse" />
   </wsdl:message>
   <wsdl:message name="Ifundamentals_GetCities_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCities" />
@@ -50,11 +38,23 @@
   <wsdl:message name="Ifundamentals_AddStores_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddStoresResponse" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_AddStaff_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddStaff" />
+  <wsdl:message name="Ifundamentals_GetStores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStores" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_AddStaff_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddStaffResponse" />
+  <wsdl:message name="Ifundamentals_GetStores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_UpdateStaff_Store_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaff_Store" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_UpdateStaff_Store_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaff_StoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStaffs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffs" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_GetStaffs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffsResponse" />
   </wsdl:message>
   <wsdl:message name="Ifundamentals_AddStaff2_InputMessage">
     <wsdl:part name="parameters" element="tns:AddStaff2" />
@@ -62,23 +62,35 @@
   <wsdl:message name="Ifundamentals_AddStaff2_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddStaff2Response" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_AddAddress_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddAddress" />
-  </wsdl:message>
-  <wsdl:message name="Ifundamentals_AddAddress_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddAddressResponse" />
-  </wsdl:message>
   <wsdl:message name="Ifundamentals_UpdateStaff_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateStaff" />
   </wsdl:message>
   <wsdl:message name="Ifundamentals_UpdateStaff_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateStaffResponse" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_LastId_InputMessage">
-    <wsdl:part name="parameters" element="tns:LastId" />
+  <wsdl:message name="Ifundamentals_Block_InputMessage">
+    <wsdl:part name="parameters" element="tns:Block" />
   </wsdl:message>
-  <wsdl:message name="Ifundamentals_LastId_OutputMessage">
-    <wsdl:part name="parameters" element="tns:LastIdResponse" />
+  <wsdl:message name="Ifundamentals_Block_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_DeBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeBlock" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_DeBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddress" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_AddAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_LastIdStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:LastIdStore" />
+  </wsdl:message>
+  <wsdl:message name="Ifundamentals_LastIdStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LastIdStoreResponse" />
   </wsdl:message>
   <wsdl:message name="Ifundamentals_GetFilms_InputMessage">
     <wsdl:part name="parameters" element="tns:GetFilms" />
@@ -91,17 +103,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/Ajouter" message="tns:Ifundamentals_Ajouter_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AjouterResponse" message="tns:Ifundamentals_Ajouter_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetStores">
-      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStores" message="tns:Ifundamentals_GetStores_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStoresResponse" message="tns:Ifundamentals_GetStores_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetCountries">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetCountries" message="tns:Ifundamentals_GetCountries_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetCountriesResponse" message="tns:Ifundamentals_GetCountries_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetStaffs">
-      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffs" message="tns:Ifundamentals_GetStaffs_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffsResponse" message="tns:Ifundamentals_GetStaffs_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCities">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetCities" message="tns:Ifundamentals_GetCities_InputMessage" />
@@ -115,25 +119,41 @@
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStores" message="tns:Ifundamentals_AddStores_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStoresResponse" message="tns:Ifundamentals_AddStores_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddStaff">
-      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff" message="tns:Ifundamentals_AddStaff_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStaffResponse" message="tns:Ifundamentals_AddStaff_OutputMessage" />
+    <wsdl:operation name="GetStores">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStores" message="tns:Ifundamentals_GetStores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStoresResponse" message="tns:Ifundamentals_GetStores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff_Store">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaff_Store" message="tns:Ifundamentals_UpdateStaff_Store_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaff_StoreResponse" message="tns:Ifundamentals_UpdateStaff_Store_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffs" message="tns:Ifundamentals_GetStaffs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/GetStaffsResponse" message="tns:Ifundamentals_GetStaffs_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddStaff2">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff2" message="tns:Ifundamentals_AddStaff2_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddStaff2Response" message="tns:Ifundamentals_AddStaff2_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddAddress">
-      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddAddress" message="tns:Ifundamentals_AddAddress_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddAddressResponse" message="tns:Ifundamentals_AddAddress_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="UpdateStaff">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaff" message="tns:Ifundamentals_UpdateStaff_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/UpdateStaffResponse" message="tns:Ifundamentals_UpdateStaff_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="LastId">
-      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/LastId" message="tns:Ifundamentals_LastId_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/LastIdResponse" message="tns:Ifundamentals_LastId_OutputMessage" />
+    <wsdl:operation name="Block">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/Block" message="tns:Ifundamentals_Block_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/BlockResponse" message="tns:Ifundamentals_Block_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeBlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/DeBlock" message="tns:Ifundamentals_DeBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/DeBlockResponse" message="tns:Ifundamentals_DeBlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/AddAddress" message="tns:Ifundamentals_AddAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/AddAddressResponse" message="tns:Ifundamentals_AddAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LastIdStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/LastIdStore" message="tns:Ifundamentals_LastIdStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Ifundamentals/LastIdStoreResponse" message="tns:Ifundamentals_LastIdStore_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetFilms">
       <wsdl:input wsaw:Action="http://tempuri.org/Ifundamentals/GetFilms" message="tns:Ifundamentals_GetFilms_InputMessage" />
@@ -151,26 +171,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetStores">
-      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStores" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetCountries">
       <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetCountries" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetStaffs">
-      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStaffs" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -205,8 +207,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddStaff">
-      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddStaff" style="document" />
+    <wsdl:operation name="GetStores">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff_Store">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/UpdateStaff_Store" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/GetStaffs" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -223,15 +243,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddAddress">
-      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddAddress" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="UpdateStaff">
       <soap:operation soapAction="http://tempuri.org/Ifundamentals/UpdateStaff" style="document" />
       <wsdl:input>
@@ -241,8 +252,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="LastId">
-      <soap:operation soapAction="http://tempuri.org/Ifundamentals/LastId" style="document" />
+    <wsdl:operation name="Block">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/Block" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeBlock">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/DeBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAddress">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/AddAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastIdStore">
+      <soap:operation soapAction="http://tempuri.org/Ifundamentals/LastIdStore" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

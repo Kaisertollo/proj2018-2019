@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="nothing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +114,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="nothing.xaml.cs">
+      <DependentUpon>nothing.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddAddress.xaml.cs">
       <DependentUpon>AddAddress.xaml</DependentUpon>
     </Compile>

@@ -132,7 +132,7 @@ namespace proj2018_2019
             foreach (StaffL s in listL)
             {
                 if (s.boole)
-                    Client.UpdateStaff(s.Staff.Staff_ID, Client.LastId());
+                    Client.UpdateStaff_Store(s.Staff.Staff_ID, Client.LastIdStore());
             }
         }
     }

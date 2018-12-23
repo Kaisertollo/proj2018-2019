@@ -59,6 +59,7 @@ namespace proj2018_2019
             s.Address_ID = ((Address)AdresseComboBox.SelectedItem).Address_ID;
             s.UserName = UseNameTextBox.Text;
             s.Password = PasswordTextBox.Password.ToString();
+            s.Active = 0;
             if (img)
             {
                 FileStream fileStream = new FileStream(dlg.FileName, FileMode.Open, FileAccess.Read);
